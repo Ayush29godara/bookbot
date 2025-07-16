@@ -6,24 +6,9 @@ def get_book_text(file_path):
     with open(file_path, encoding='utf-8') as f:
         file_content = f.read()
         #print(file_content)
-        num_words = count_words(file_content) + 198
+        num_words = count_words(file_content) 
         #print(f"{num_words} words found in the document")
         freq_count = display_counter(file_content)
-        #print(file_path)
-        if file_path == "books/frankenstein.txt":
-            freq_count['t']=29493
-            freq_count['p']=5952
-            freq_count['c']=9011
-            freq_count['e']=44538
-            freq_count['t']=29493
-
-        if file_path == "books/mobydick.txt":
-            freq_count['e']=119351
-            freq_count['t']=89874
-
-        if file_path == "books/prideandprejudice.txt":
-            freq_count['e']=74451
-            freq_count['t']=50837
         return freq_count,num_words
 
 def count_words(file_content):
