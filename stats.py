@@ -12,8 +12,7 @@ def get_book_text(file_path):
         return freq_count,num_words
 
 def count_words(file_content):
-    file_word_list = re.findall(r"\b[\w'-]+\b", file_content)
-    #file_word_list = re.findall(r'\w+|[^\w\s]',file_content)
+    file_word_list = file_content.split()
     return len(file_word_list)
 
 def display_counter(file_content):
